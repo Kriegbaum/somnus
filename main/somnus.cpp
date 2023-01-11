@@ -17,9 +17,6 @@ extern "C"
     void app_main();
 }
 
-const char *mp3_str = ".mp3";
-const char *flac_str = ".flac";
-
 void app_main()
 {
     ESP_LOGI(TAG, "Booting up...");

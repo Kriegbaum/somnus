@@ -1,0 +1,15 @@
+menu "My Audio Board"
+
+choice CUSTOMER_AUDIO_BOARD
+    prompt "ESP32S3 HAT KIT"
+    default HAT_KIT
+    help
+        Select an audio board to use with the ESP-ADF
+
+config HAT_KIT
+    bool "ESP32S3 HAT KIT"
+
+endchoice
+
+endmenu
+
