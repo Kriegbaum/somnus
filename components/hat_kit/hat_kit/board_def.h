@@ -60,7 +60,7 @@
 
 #define BOARD_PA_GAIN               (6) // Figure out what this actually does at some point
 
-extern audio_hal_func_t AUDIO_NEW_CODEC_DEFAULT_HANDLE;
+extern audio_hal_func_t AUDIO_CODEC_UDA1334_DEFAULT_HANDLE;
 
 #define AUDIO_CODEC_DEFAULT_CONFIG(){                   \
         .adc_input  = AUDIO_HAL_ADC_INPUT_LINE1,        \

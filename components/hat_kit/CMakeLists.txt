@@ -4,11 +4,11 @@ set(COMPONENT_PRIV_REQUIRES audio_sal audio_hal esp_dispatcher esp_peripherals d
 
 if(CONFIG_AUDIO_BOARD_CUSTOM)
 message(STATUS "Current board name is " CONFIG_AUDIO_BOARD_CUSTOM)
-list(APPEND COMPONENT_ADD_INCLUDEDIRS ./hat_kit ./pmod_codec)
+list(APPEND COMPONENT_ADD_INCLUDEDIRS ./hat_kit ./uda1334)
 set(COMPONENT_SRCS
 ./hat_kit/board.c
 ./hat_kit/board_pins_config.c
-./pmod_codec/pmod_codec.c
+./uda1334/uda1334.c
 )
 endif()
 
