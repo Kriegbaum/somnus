@@ -24,7 +24,7 @@ class MusicPlayer
     esp_err_t init(esp_periph_set_handle_t &periph_settings, audio_board_handle_t &audio_board_handle) 
     {
         ESP_LOGI(PLAYER_TAG, "Initializing SD card...");
-        audio_board_sdcard_init(periph_settings, SD_MODE_SPI);
+        audio_board_sdcard_init(periph_settings, SD_MODE_1_LINE);
         
         ESP_LOGI(PLAYER_TAG, "Initializing playback queue...");
         dram_list_create(&playback_queue_handle);

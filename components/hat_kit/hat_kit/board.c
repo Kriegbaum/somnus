@@ -76,9 +76,10 @@ esp_err_t audio_board_sdcard_init(esp_periph_set_handle_t set, periph_sdcard_mod
     periph_sdcard_cfg_t sdcard_cfg = {
         .root = "/sdcard",
         .card_detect_pin = get_sdcard_intr_gpio(), // GPIO_NUM_34
-        .mode = SD_MODE_SPI,
+        .mode = SD_MODE_1_LINE,
     };
     esp_periph_handle_t sdcard_handle = periph_sdcard_init(&sdcard_cfg);
+    ESP_LOGI(TAG, "SD peripheral service start...");
     esp_err_t ret = esp_periph_start(set, sdcard_handle);
     while (!periph_sdcard_is_mounted(sdcard_handle)) {
         vTaskDelay(500 / portTICK_PERIOD_MS);

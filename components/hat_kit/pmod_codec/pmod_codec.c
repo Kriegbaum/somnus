@@ -30,7 +30,7 @@
 
 #include "pmod_codec.h"
 
-static const char *TAG = "new_codec";
+static const char *TAG = "pmod_codec";
 
 static bool codec_init_flag;
 
@@ -51,7 +51,7 @@ bool new_codec_initialized()
 
 esp_err_t new_codec_init(audio_hal_codec_config_t *cfg)
 {
-    ESP_LOGI(TAG, "new_codec init");
+    ESP_LOGI(TAG, "pmod_codec init");
     return ESP_OK;
 }
 
