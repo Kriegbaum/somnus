@@ -55,6 +55,7 @@ esp_err_t get_i2s_pins(i2s_port_t port, i2s_pin_config_t *i2s_config)
         i2s_config->ws_io_num = ESP_I2S_WS;
         i2s_config->data_out_num = ESP_I2S_DOUT;
         i2s_config->data_in_num = ESP_I2S_DIN;
+        ESP_LOGI(TAG, "I2S PINS %d %d %d", i2s_config->bck_io_num, i2s_config->ws_io_num, i2s_config->data_in_num);
     } else if (port == I2S_NUM_1) {
         i2s_config->bck_io_num = -1;
         i2s_config->ws_io_num = -1;

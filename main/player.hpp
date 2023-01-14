@@ -45,6 +45,7 @@ class MusicPlayer
 
         ESP_LOGI(PLAYER_TAG, "Creating I2S Stream...");
         i2s_cfg.type = AUDIO_STREAM_WRITER;
+        i2s_cfg.i2s_config.use_apll = false;
         i2s_stream_writer = i2s_stream_init(&i2s_cfg);
     
         ESP_LOGI(PLAYER_TAG, "Creating mp3 decoder...");

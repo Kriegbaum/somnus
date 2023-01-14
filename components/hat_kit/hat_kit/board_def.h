@@ -26,13 +26,13 @@
 #define _AUDIO_BOARD_DEFINITION_H_
 
 // Input button pins
-#define BUTTON_VOLUP_ID           0     /* You need to define the GPIO pins of your board */
-#define BUTTON_VOLDOWN_ID         1     /* You need to define the GPIO pins of your board */
-#define BUTTON_MUTE_ID            2     /* You need to define the GPIO pins of your board */
-#define BUTTON_SET_ID             3     /* You need to define the GPIO pins of your board */
-#define BUTTON_MODE_ID            4     /* You need to define the GPIO pins of your board */
-#define BUTTON_PLAY_ID            5     /* You need to define the GPIO pins of your board */
-#define PA_ENABLE_GPIO            6     /* You need to define the GPIO pins of your board */
+#define BUTTON_VOLUP_ID           -1     /* You need to define the GPIO pins of your board */
+#define BUTTON_VOLDOWN_ID         -1     /* You need to define the GPIO pins of your board */
+#define BUTTON_MUTE_ID            -1     /* You need to define the GPIO pins of your board */
+#define BUTTON_SET_ID             -1     /* You need to define the GPIO pins of your board */
+#define BUTTON_MODE_ID            -1     /* You need to define the GPIO pins of your board */
+#define BUTTON_PLAY_ID            -1     /* You need to define the GPIO pins of your board */
+#define PA_ENABLE_GPIO            -1     /* You need to define the GPIO pins of your board */
 #define ADC_DETECT_GPIO           7     /* You need to define the GPIO pins of your board */
 #define BATTERY_DETECT_GPIO       8     /* You need to define the GPIO pins of your board */
 
