@@ -37,19 +37,19 @@
 #define BATTERY_DETECT_GPIO       8     /* You need to define the GPIO pins of your board */
 
 // I2S DAC
-#define ESP_I2S_WS                GPIO_NUM_41
-#define ESP_I2S_DIN               GPIO_NUM_2
-#define ESP_I2S_BCK               GPIO_NUM_7
+#define ESP_I2S_WS                41
+#define ESP_I2S_DIN               2
+#define ESP_I2S_BCK               7
 #define ESP_I2S_DOUT                 -1
 // SD Card pins
 #define SDCARD_INTR_GPIO         -1      // Card detect, I think? The hat kit doesnt have one
 #define SDCARD_PWR_CTRL          -1
-#define ESP_SD_PIN_CLK           GPIO_NUM_12
-#define ESP_SD_PIN_CMD           GPIO_NUM_11
-#define ESP_SD_PIN_D0            GPIO_NUM_13
+#define ESP_SD_PIN_CLK           12
+#define ESP_SD_PIN_CMD           11
+#define ESP_SD_PIN_D0            13
 #define ESP_SD_PIN_D1            -1
 #define ESP_SD_PIN_D2            -1
-#define ESP_SD_PIN_D3            GPIO_NUM_10  
+#define ESP_SD_PIN_D3            10  
 #define ESP_SD_PIN_D4               -1
 #define ESP_SD_PIN_D5               -1
 #define ESP_SD_PIN_D6               -1
@@ -58,6 +58,7 @@
 #define ESP_SD_PIN_WP               -1
 #define SDCARD_OPEN_FILE_NUM_MAX  5
 
+#define BOARD_PA_GAIN               (6) // Figure out what this actually does at some point
 
 extern audio_hal_func_t AUDIO_NEW_CODEC_DEFAULT_HANDLE;
 

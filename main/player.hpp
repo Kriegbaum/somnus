@@ -24,7 +24,7 @@ class MusicPlayer
     esp_err_t init(esp_periph_set_handle_t &periph_settings, audio_board_handle_t &audio_board_handle) 
     {
         ESP_LOGI(PLAYER_TAG, "Initializing SD card...");
-        audio_board_sdcard_init(periph_settings, SD_MODE_1_LINE);
+        audio_board_sdcard_init(periph_settings, SD_MODE_SPI);
         
         ESP_LOGI(PLAYER_TAG, "Initializing playback queue...");
         dram_list_create(&playback_queue_handle);
@@ -32,6 +32,7 @@ class MusicPlayer
         sdcard_scan(save_queue_callback, "/sdcard", 0, supported_types, 2, playback_queue_handle);
         dram_list_show(playback_queue_handle);
 
+        /*
         ESP_LOGI(PLAYER_TAG, "Initializing codec chip...");
         audio_hal_ctrl_codec(audio_board_handle->audio_hal, AUDIO_HAL_CODEC_MODE_DECODE, AUDIO_HAL_CTRL_START);
 
@@ -75,6 +76,7 @@ class MusicPlayer
         audio_pipeline_run(pipeline);
 
         audio_element_report_codec_fmt(fatfs_stream_reader);
+        */
         return ESP_OK;
     }
 

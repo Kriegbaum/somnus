@@ -28,7 +28,7 @@
 #include "driver/gpio.h"
 #include "board.h"
 
-#include "new_codec.h"
+#include "pmod_codec.h"
 
 static const char *TAG = "new_codec";
 
