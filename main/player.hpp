@@ -32,7 +32,6 @@ class MusicPlayer
         sdcard_scan(save_queue_callback, "/sdcard", 0, supported_types, 2, playback_queue_handle);
         dram_list_show(playback_queue_handle);
 
-        /*
         ESP_LOGI(PLAYER_TAG, "Initializing codec chip...");
         audio_hal_ctrl_codec(audio_board_handle->audio_hal, AUDIO_HAL_CODEC_MODE_DECODE, AUDIO_HAL_CTRL_START);
 
@@ -76,7 +75,6 @@ class MusicPlayer
         audio_pipeline_run(pipeline);
 
         audio_element_report_codec_fmt(fatfs_stream_reader);
-        */
         return ESP_OK;
     }
 
@@ -86,8 +84,6 @@ class MusicPlayer
         audio_pipeline_pause(pipeline);
         audio_pipeline_breakup_elements(pipeline, mp3_decoder);
         audio_pipeline_relink(pipeline, &flac_pipe_tag[0], 3);
-        //audio_pipeline_reset_ringbuffer(pipeline);
-        //audio_pipeline_reset_elements(pipeline);
         audio_pipeline_set_listener(pipeline, evt);
         audio_pipeline_run(pipeline);
         audio_pipeline_resume(pipeline);
@@ -101,8 +97,6 @@ class MusicPlayer
         audio_pipeline_pause(pipeline);
         audio_pipeline_breakup_elements(pipeline, flac_decoder);
         audio_pipeline_relink(pipeline, &mp3_pipe_tag[0], 3);
-        //audio_pipeline_reset_ringbuffer(pipeline);
-        //audio_pipeline_reset_elements(pipeline);
         audio_pipeline_set_listener(pipeline, evt);
         audio_pipeline_run(pipeline);
         audio_pipeline_resume(pipeline);

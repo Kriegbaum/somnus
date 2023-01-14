@@ -37,7 +37,7 @@ void app_main()
 
     while(1)
     {
-        //player.tick();
+        player.tick();
     }
 }
 
