@@ -10,12 +10,18 @@
 #include "buttons.hpp"
 #include "player.hpp"
 
+#include <Adafruit_SSD1306.h>
+#include <Adafruit_GFX.h>
+#include <Wire.h>
+
 static const char *TAG =  "APP_MAIN";
 
 extern "C" 
 {
     void app_main();
 }
+
+Adafruit_SSD1306 display(128, 32, &Wire, -1);
 
 void app_main()
 {
@@ -34,6 +40,17 @@ void app_main()
 
     MusicPlayer player = MusicPlayer();
     player.init(set, board_handle);
+
+    Wire.setPins(ESP_I2C_SDA, ESP_I2C_SCL);
+    if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3c)) {
+        ESP_LOGI(TAG, "Screen init failed");
+    }
+    display.clearDisplay();
+    display.setTextSize(1);
+    display.setTextColor(SSD1306_WHITE);
+    display.setCursor(10, 0);
+    display.println("Hello world!");
+    display.display();
 
     while(1)
     {

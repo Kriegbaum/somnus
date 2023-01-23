@@ -37,10 +37,16 @@
 #define BATTERY_DETECT_GPIO          8     /* You need to define the GPIO pins of your board */
 
 // I2S DAC
-#define ESP_I2S_WS                  41
+//#define ESP_I2S_WS                  41
+#define ESP_I2S_WS                  36
 #define ESP_I2S_DIN                 -1
 #define ESP_I2S_BCK                  7
 #define ESP_I2S_DOUT                 2
+
+// I2C Pins
+#define ESP_I2C_SDA                41
+#define ESP_I2C_SCL                40
+
 // SD Card pins
 #define SDCARD_INTR_GPIO            -1      // Card detect, I think? The hat kit doesnt have one
 #define SDCARD_PWR_CTRL             -1
